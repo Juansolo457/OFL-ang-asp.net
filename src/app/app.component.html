@@ -1,33 +1,37 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+  <div class="row " >
+    <div class="col-xs-12 col-md-6 col-md-offset-3 sendpostbtn">
+      <form class="form-inline" #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
         <div class="form-group">
           <label for="title">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="title"
-            required
-            ngModel
-            name="title"
-          />
+          <fieldset class="b">
+              <input
+              type="text"
+              class="form-control"
+              id="title"
+              required
+              ngModel
+              name="title"
+            />
+          </fieldset>
+
         </div>
         <div class="form-group">
           <label for="content">Content</label>
-          <textarea
+          <input
+             type="text"
             class="form-control"
             id="content"
             required
             ngModel
-            name="content"
-          ></textarea>
+            name="content">
         </div>
-        <button
-          class="btn btn-primary"
+        <button 
+          class="btn btn-primary sendpostbtn"
           type="submit"
           [disabled]="!postForm.valid"
         >
+
           Send Post
         </button>
       </form>
@@ -71,6 +75,17 @@
     <thead>
       <tr>
         <th>Firstname</th>
+        <label for="title">Title</label>
+        <fieldset class="b">
+            <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            ngModel
+            name="title"
+          />
+        </fieldset>
         <th>Lastname</th>
         <th>Email</th>
       </tr>
